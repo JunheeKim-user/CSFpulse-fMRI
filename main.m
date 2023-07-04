@@ -9,17 +9,17 @@
 %% Initialization
 clear; close all; clc;
 addpath(pwd);
-temp = inputdlg('Enter the directory of dataset');
+temp = inputdlg('Enter the directory of dataset'); % Ex. /Sample
 targetpath = temp{1};
 addpath(targetpath);
 cd(targetpath);
 
-temp = inputdlg('Enter the name or keyword of dataset(s) (keyword~~~.nii)');
+temp = inputdlg('Enter the name or keyword of dataset(s) (keyword~~~.nii)'); %Ex. sub
 key = temp{1};
 name_epi = dir(['*' key '*']);
 
 
-temp = inputdlg('Enter the directory where you want to save the processed data');
+temp = inputdlg('Enter the directory where you want to save the processed data'); %Ex. /Sample/save_path
 savepath = temp{1};
 
 % temp = inputdlg('What is the MRI vendor for the data? (ex. siemens)');
