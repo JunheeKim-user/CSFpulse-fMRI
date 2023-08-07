@@ -1,4 +1,6 @@
 # Supplemental CODE for CSFpulse calculation from EPI fMRI data
+This code is for processing CSFpulse technique which was proposed to calculate CSF pulsation using an EPI-based fMRI dataset.
+Please cite the following reference if you use these codes:
 Kim, J. H., Im, J. G., & Park, S. H. (2022). Measurement of CSF pulsation from EPI-based human fMRI. Neuroimage, 257, 119293.
 
 - The data type can be either nii or Nifti.
