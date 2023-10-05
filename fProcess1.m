@@ -7,7 +7,6 @@ for cnt = 1:length(realtargetdata)
     cd(realsavepath);
     data0 = realtargetdata(cnt).name;
     load([data0 '_prepare_save.mat']);
-    TR=str2num(TR);TE=str2num(TE);FA=str2num(FA);
     calendar = calendartoday;
     resolutionx = niiinfo.PixelDimensions(1);
     resolutiony = niiinfo.PixelDimensions(2);
