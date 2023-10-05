@@ -33,7 +33,7 @@ for cnt=1:length(realtargetdata)
         end
         
         if saveonoff
-            save([realsavepath '\' data1 '\' num2str(calendar) '_preprocess' '_Analysis_save.mat']);
+            save([realsavepath '\' data1 '\' num2str(calendar) '_preprocess' '_Analysis_save_pair' num2str(itr) '.mat']);
         end
         clear ratio2;
         
