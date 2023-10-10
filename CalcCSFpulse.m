@@ -1,17 +1,17 @@
 function y=CalcCSFpulse(targetpath,savepath,name_sub,name_epi,TR,TE,FA,GoFlag1,GoFlag2)
 nowtime_temp = datevec(datetime);
 year = num2str(nowtime_temp(1));
-if length(nowtime_temp(2))==1
+if nowtime_temp(2)<10
     month = ['0' num2str(nowtime_temp(2))];
 else
     month = num2str(nowtime_temp(2));
 end
-if length(nowtime_temp(3))==1
+if nowtime_temp(3)<10
     day = ['0' num2str(nowtime_temp(3))];
 else
     day = num2str(nowtime_temp(3));
 end
-calendar = str2num([year month day]);
+calendar = str2num([year month day]); %#ok<ST2NM>
 %% Data Scan, ROI set.
 if GoFlag1
     fDataROIset(targetpath,savepath,name_sub,name_epi,TR,TE,FA);
