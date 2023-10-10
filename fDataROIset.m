@@ -30,7 +30,7 @@ for cnt=1:length(name_sub)
         end
     end
     close all;
-    prompt = '4th ventricle slices number [array form] : ';
+    prompt = 'Enter 4th ventricle slices number (should be continuous numbers) [array form] (ex. [10,11,12,13]) : ';
     csfslice = input(prompt);
     slicelist = csfslice;
     %% Manually set CSF ROI of each target slices
