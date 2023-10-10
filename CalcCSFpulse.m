@@ -25,7 +25,7 @@ if GoFlag2
     fProcess2(name_sub,targetpath,savepath,calendar,resultShortsatSave);
     fProcess3(name_sub,targetpath,savepath,calendar);
     
-    save2='raw';
+    save2='CSFpulse_dynamic_raw_data';
     fCSFpulse_Raw(name_sub,targetpath,savepath,calendar,save2);
 end
 
