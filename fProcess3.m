@@ -16,11 +16,11 @@ for sbjl0=1:length(realtargetdata0)
         roiarea = sum(sum(csf_roisetsort(:,:,str2num(target_slice2(find(target_slice2==' ')+1:end)))))*(resolutionx*resolutiony);
         CSFpulse = roiarea*ratio2_mean;
         final(isDir).name=dataset0;
-        final(isDir).csf11=mean(csf11);
-        final(isDir).csf13=mean(csf13);
-        final(isDir).ratio2_mean=ratio2_mean;
+        final(isDir).csf_lower=mean(csf11);
+        final(isDir).csf_upper=mean(csf13);
+        final(isDir).CSFratio=ratio2_mean;
         final(isDir).roiarea = roiarea;
-        final(isDir).CSFquant = CSFpulse;
+        final(isDir).CSFpulse = CSFpulse;
         disp(['Processing 3... subj.' dataset0 ' finished']);
     end
     
