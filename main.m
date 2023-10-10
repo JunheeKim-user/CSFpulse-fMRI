@@ -32,7 +32,7 @@ name_sub = dir(['*' key '*']);
 temp = inputdlg('Enter the name or common keyword of fMRI-EPI nii dataset(s) (~"keyword"~.nii)');
 % ex. enter "func" when only the fMRI-EPI dataset's name commonly includes keyword "func"
 key = temp{1};
-name_epi = dir(['*' key '*']);
+name_epi = key;
 
 
 temp = inputdlg('Enter the directory where you want to save the processed data');
