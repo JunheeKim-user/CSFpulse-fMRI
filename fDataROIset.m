@@ -3,7 +3,7 @@ function y=fDataROIset(targetpath,savepath,name_sub,name_epi,TR,TE,FA)
 for cnt=1:length(name_sub)    
     cd(targetpath);
     cd(name_sub(cnt).name);
-    epitemp = dir(['*' name_epi '.nii*']);
+    epitemp = dir(['*' name_epi '*.nii*']);
     func = niftiread(epitemp(1).name);
     niiinfo = niftiinfo(epitemp(1).name);
     epi_img = cast(func,'double');
