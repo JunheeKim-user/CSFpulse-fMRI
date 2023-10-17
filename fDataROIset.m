@@ -5,6 +5,11 @@ for cnt=1:length(name_sub)
     cd(name_sub(cnt).name);
     epitemp = dir(['*' name_epi '*.nii*']);
     func = niftiread(epitemp(1).name);
+    if length(epitemp)>2 && size(func,4)==1 
+        for niil=1:length(epitemp)
+            func(:,:,:,niil) = niftiread(epitemp(niil).name);
+        end
+    end    
     niiinfo = niftiinfo(epitemp(1).name);
     epi_img = cast(func,'double');
     [img_row,img_col,slicen,time_phase]=size(epi_img);
